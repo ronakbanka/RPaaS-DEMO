@@ -1,0 +1,15 @@
+<%= form_for @topic do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.fields_for @comment do |f2| %>
+      <%= f2.label :name %>
+      <%= f2.text_field :name, :value => nil %>
+
+      <%= f2.label :content %>
+      <%= f2.text_area :content, :size => "4" %>
+  <% end %>
+
+  <%= f.submit "create" %>
+
+<% end %>

@@ -1,0 +1,53 @@
+// Place all the styles related to the topics controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#topics, #comments{
+	.topicArea{
+		min-height: 600px;
+		a {
+			font-size: 20px;
+		}
+		.button_to {
+			float:right;
+		}
+	}
+
+	.item {
+		background-color: #DCDCDC;
+		margin-bottom: 30px;
+	}
+
+	.titleArea {
+		padding: 5px 0 15px 20px;
+	}
+	.titleArea h3 a{
+		color: red;
+		font-size: 25px;
+		font-weight: normal;
+	}
+	.infoArea {
+		font-size: 16px;
+		padding: 0 0 10px 10px;
+	}
+	.contentArea {
+		font-size: 20px;
+		padding: 0 0 30px 28px;
+	}
+
+	.new_comment{
+		padding-left: 20px;
+	}
+
+	.nameArea{
+		float: left;
+	}
+	.submitArea{
+		float:left;
+		padding: 20px;
+	}
+
+	textarea {
+		width: 300px;
+	}
+}

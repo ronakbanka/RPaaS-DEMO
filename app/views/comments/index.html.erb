@@ -1,0 +1,28 @@
+<div class="item">
+    <div class="titleArea"><h3><%= @topic.title %></h3></div>
+    <% @topic.comments.each_with_index do |comment,i| %>
+      <div class="infoArea">
+        <%= i+1 %>
+        名前：<%= comment.name %>
+        <%= comment.posted_at.strftime("%Y年 %m月 %d日, %H:%M:%S") %>
+      </div>
+      <div class="contentArea">
+        <%= comment.content %>
+      </div>
+    <% end %>
+    <%= form_for @comment, :url => {:controller => :comments, :action => :create, :topic_id => @topic.id}  do |f| %>
+      <div class="clearfix">
+        <div class="nameArea">
+          <label>名前</label>
+          <%= f.text_field :name, :value => nil %>
+        </div>
+        <div class="submitArea">
+          <%= f.submit "書き込む" , :class => "btn-primary" %>
+        </div>
+      </div>
+          
+
+      <%= f.text_area :content, :size => "4" %>
+
+    <% end %>
+  </div>
